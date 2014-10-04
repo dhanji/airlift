@@ -1,14 +1,10 @@
 package io.airlift.http.server;
 
-import io.airlift.http.server.WebServer;
-import io.airlift.http.server.WebServerModule;
-
 import java.util.HashMap;
 
 import org.apache.shiro.web.env.EnvironmentLoaderListener;
 import org.apache.shiro.web.servlet.ShiroFilter;
 import org.eclipse.jetty.server.handler.RequestLogHandler;
-import org.eclipse.jetty.servlets.GzipFilter;
 import org.junit.Test;
 
 import com.google.inject.Guice;
@@ -33,8 +29,8 @@ public class WebServerTest {
         // Shiro
         // shiroEnvironmentClass
         // context parameters
-        listener(EnvironmentLoaderListener.class);
-        filter("/*").through(ShiroFilter.class);        
+        //listener(EnvironmentLoaderListener.class);
+        //filter("/*").through(ShiroFilter.class);        
         
         // Filters
         //filter("/*").through(TimingFilter.class);
