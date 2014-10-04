@@ -23,7 +23,8 @@ public class WebServerTest {
     Injector injector = Guice.createInjector(new WebServerModule() {
       @Override
       protected void configureWebServer() {        
-                        
+               
+        // This is not the right place for this, should be part of a configuration file
         server(8080);
 
         // Shiro
